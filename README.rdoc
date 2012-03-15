@@ -1,3 +1,3 @@
-= test_collab
+= redmine_test_collab
 
-Description goes here
+Tested with redmine 1.3.2.
