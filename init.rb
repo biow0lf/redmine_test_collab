@@ -9,7 +9,7 @@ Redmine::Plugin.register :redmine_test_collab do
   author_url 'https://github.com/biow0lf'
 
   settings(:default => {
-             'enabled' => false
+             'enabled' => 'false'
            }, :partial => 'settings/test_collab')
 end
 

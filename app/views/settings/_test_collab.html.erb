@@ -1,1 +1,7 @@
 <!-- DEMO -->
+
+<p><label><%= l(:enable_test_collab) %></label>
+<%= select_tag 'settings[enabled]', options_for_select([['No', 'false'], ['Yes', 'true']], @settings['enabled']) %><br />
+</p>
+
+<!-- END DEMO -->
