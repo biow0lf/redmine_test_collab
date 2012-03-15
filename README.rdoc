@@ -1,3 +1,5 @@
 = redmine_test_collab
 
 Tested with redmine 1.3.2.
+
+Edit app/views/test_collab/_test_collab_js.html.erb before using.
