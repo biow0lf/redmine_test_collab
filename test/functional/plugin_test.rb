@@ -6,14 +6,20 @@ class WelcomeControllerTest < ActionController::TestCase
     @response = ActionController::TestResponse.new
   end
 
+  def test_with_not_yet_configured_plugin
+    Setting['plugin_redmine_test_collab'] = { }
+    get :index
+    assert !@response.body.include?('<!-- HELLO -->')
+  end
+
   def test_with_enabled_plugin
-    Setting['plugin_redmine_test_collab'][:enabled] = 'true'
+    Setting['plugin_redmine_test_collab'] = { :enabled => 'true' }
     get :index
     assert @response.body.include?('<!-- HELLO -->')
   end
 
   def test_with_disabled_plugin
-    Setting['plugin_redmine_test_collab'][:enabled] = 'false'
+    Setting['plugin_redmine_test_collab'] = { :enabled => 'false' }
     get :index
     assert !@response.body.include?('<!-- HELLO -->')
   end
