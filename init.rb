@@ -11,6 +11,8 @@ Redmine::Plugin.register :redmine_test_collab do
   settings(:default => {
              'enabled' => 'false'
            }, :partial => 'settings/test_collab')
+
+  requires_redmine :version_or_higher => '1.0.0'
 end
 
 require 'redmine_test_collab/hooks/view_layouts_base_html_head_hook'
