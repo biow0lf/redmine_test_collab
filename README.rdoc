@@ -2,7 +2,7 @@
 
 Tested with redmine 1.0.0 - 1.3.2.
 
-Edit app/views/test_collab/_test_collab_js.html.erb before using.
+Put your html code in app/views/test_collab/_test_collab_js.html.erb before using plugin.
 
 == Installation and Setup
 
