@@ -4,7 +4,7 @@ Redmine::Plugin.register :redmine_test_collab do
   name 'Redmine Test Collab plugin'
   author 'Igor Zubkov'
   description 'Redmine Test Collab plugin'
-  version '0.0.1'
+  version '0.0.2'
   url 'https://github.com/biow0lf/redmine_test_collab'
   author_url 'https://github.com/biow0lf'
 
