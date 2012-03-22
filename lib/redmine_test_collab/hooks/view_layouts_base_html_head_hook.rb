@@ -1,7 +1,10 @@
 module RedmineTestCollab
-  module Hooks
-    class ViewLayouts_BaseHtmlHeadHook < Redmine::Hook::ViewListener
-      render_on(:view_layouts_base_html_head, :partial => 'test_collab/test_collab_js', :layout => false)
+  class Hooks < Redmine::Hook::ViewListener
+    def view_layouts_base_html_head(context = { })
+      context[:controller].send(:render_to_string, {
+        :partial => 'test_collab/test_collab_js',
+        :locals => context
+      })
     end
   end
 end
